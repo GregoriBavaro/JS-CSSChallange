@@ -1,13 +1,21 @@
 .card {
   border: 1px solid rgb(214, 214, 214);
   height: max-content;
-  min-height: 540px;
+  /* min-height: 540px; */
   display: flex;
   flex-direction: column;
   padding: 0 0 0.5rem 0;
   max-width: 25rem;
   border-radius: .2rem;
   background-color: white;
+  display: none;
+}
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4){
+  display: flex;
 }
 
 /* CARD HEADER */
@@ -83,6 +91,7 @@
 
 .cardBody__photoContainer img {
   max-width: 100%;
+  
 }
 
 .cardBody__textContainer {
@@ -177,4 +186,38 @@
 
 .disliked {
   background-color: black;
+}
+
+/* Error modal */
+
+.errorContainer {
+  width: 15rem;
+  height: 8rem;
+  border: 1px solid red;
+  border-radius: 0.3rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5rem;
+  display: none;
+  text-align: center;
+}
+
+.errorContainer button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0.9em;
+}
+
+.errorContainer button:hover {
+  scale: 1.1;
+  color: red;
 }
